@@ -1,3 +1,5 @@
+import { Counter } from './Feedback/Test';
+
 export const App = () => {
   return (
     <div
@@ -9,6 +11,8 @@ export const App = () => {
         fontSize: 40,
         color: '#010101',
       }}
-    ></div>
+    >
+      <Counter />
+    </div>
   );
 };
