@@ -13,12 +13,21 @@
 }
 
 .button {
+  width: 150px;
   background-color: orange;
   height: 40px;
   border-radius: 4px;
   border: 1px solid black;
+
+  cursor: pointer;
 }
 
 .button + .button {
   margin-left: 15px;
+}
+
+.spanStats {
+  margin-left: 10px;
+
+  color: orange;
 }

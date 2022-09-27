@@ -1,4 +1,4 @@
-import { Counter } from './Feedback/Test';
+import { Feedback } from './Feedback/Feedback';
 
 export const App = () => {
   return (
@@ -12,7 +12,7 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      <Counter />
+      <Feedback />
     </div>
   );
 };
