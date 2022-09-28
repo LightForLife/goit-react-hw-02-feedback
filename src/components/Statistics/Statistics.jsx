@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
-import css from '../FeedbackOptions/Test.module.css';
+import { ListStatistic } from './Statistics.styled';
+import { ItemStatistic } from './Statistics.styled';
 
 export const Statistics = ({
   good,
@@ -9,28 +10,28 @@ export const Statistics = ({
   positivePercentage,
 }) => {
   return (
-    <div>
-      <p>
-        Good:<span className={css.spanStats}>{good}</span>
-      </p>
-      <p>
-        Neutral:
-        <span className={css.spanStats}>{neutral}</span>
-      </p>
-      <p>
-        Bad:<span className={css.spanStats}>{bad}</span>
-      </p>
-      <p>
-        Total:
-        <span className={css.spanStats}>{total}</span>
-      </p>
-      <p>
-        Positive feedback:
-        <span className={css.spanStats}>
-          {positivePercentage ? positivePercentage : 0}%
-        </span>
-      </p>
-    </div>
+    <ListStatistic>
+      <ItemStatistic>
+        <span>Good:</span>
+        <span>{good}</span>
+      </ItemStatistic>
+      <ItemStatistic>
+        <span>Neutral:</span>
+        <span>{neutral}</span>
+      </ItemStatistic>
+      <ItemStatistic>
+        <span>Bad:</span>
+        <span>{bad}</span>
+      </ItemStatistic>
+      <ItemStatistic>
+        <span>Total:</span>
+        <span>{total}</span>
+      </ItemStatistic>
+      <ItemStatistic>
+        <span> Positive feedback:</span>
+        <span>{positivePercentage ? positivePercentage : 0}%</span>
+      </ItemStatistic>
+    </ListStatistic>
   );
 };
 

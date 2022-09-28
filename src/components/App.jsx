@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { GlobalStyle } from 'styles/GlobalStyles';
 import { Section } from './Section/Section';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
@@ -32,8 +33,10 @@ export class App extends Component {
     const options = Object.keys(this.state);
     const countTotalFeedback = this.countTotalFeedback();
     const positivePercentage = this.countPositiveFeedbackPercentage();
+
     return (
       <>
+        <GlobalStyle />
         <Section title={'Please leave feedback'}>
           <FeedbackOptions
             options={options}
